@@ -56,14 +56,22 @@ public class MainaderiaList implements Mainaderia {
         
     	//TODO 1
         /* Exercici: a la versió mostrada a classe de la implementació
-           d'aquest mètode, la iteració sobre el contingut no es feia
+           d'aquest mètode, la iteració sobre el contingut no es feia 
            utilitzant l'iterador de la col·lecció.
            Torneu a escriure el codi d'aquest mètode però ara fent ús 
            de l'iterador proporcionat pel mètode iterator.
          
            Després, podeu executar ProvaMainaderia per veure si el resultat
            que obteniu és el mateix que s'obtenia abans */
-    	return -1;
+    	
+    	int cnt = 0;
+    	for (Object o: contingut) {
+			Criatura c = (Criatura)o;
+			if(c.getSexe() == sexe)
+				cnt++;
+		}
+    	
+    	return cnt;
     }
     
     // retorna la i-èssima criatura. Excepció si el paràmetre està fora
